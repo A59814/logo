@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Block Ozak</title>
+<meta name="description" content="Block Ozak — A luxurious block puzzle.">
+<meta name="theme-color" content="#1E0F3C">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div id="fl"></div>
+
+<!-- INTRO (3 seconds) -->
+<div id="intro" class="scr on" aria-label="Block Ozak">
+  <div id="ig"><div id="io"></div></div>
+  <div id="it"><b id="t1">BLOCK</b><b id="t2">OZAK</b></div>
+</div>
+
+<!-- MAIN MENU -->
+<main id="menu" class="scr">
+  <header class="top">
+    <div class="chip glass"><span class="av" id="avl">1</span><span id="lvTxt"></span></div>
+    <div class="chip glass"><span id="stT">⭐ 0</span><button class="ico" data-go="settings" aria-label="Settings">⚙</button></div>
+  </header>
+  <section class="mid">
+    <img id="mlogo" src="logo.svg" alt="Block Ozak" width="120" height="120">
+    <p id="tag" class="mu"></p>
+    <button class="btn big" data-go="chapters"><span data-t="0"></span></button>
+    <div class="row3">
+      <button class="btn glass" data-mode="endless"><i>🎲</i><span data-t="1"></span></button>
+      <button class="btn glass" data-mode="daily"><i>📅</i><span data-t="2"></span><small id="strk"></small></button>
+      <button class="btn glass" data-mode="zen"><i>🧘</i><span data-t="3"></span></button>
+    </div>
+  </section>
+  <footer>
+    <p id="prog" class="mu"></p>
+    <p class="mu">Block Ozak v1.1 • <span data-t="23"></span></p>
+    <p class="mu"><span data-t="22"></span>: <a id="mail" href="mailto:samychiko62@gmail.com">samychiko62@gmail.com</a></p>
+  </footer>
+</main>
+
+<!-- CHAPTERS -->
+<section id="chapters" class="scr">
+  <header class="top"><button class="ico" data-back aria-label="Back">‹</button><h2 data-t="0"></h2><span class="ico"></span></header>
+  <div id="chGrid" class="grid"></div>
+</section>
+
+<!-- LEVELS -->
+<section id="levels" class="scr">
+  <header class="top"><button class="ico" data-back aria-label="Back">‹</button><h2 id="lvTitle"></h2><span class="ico"></span></header>
+  <div id="lvGrid" class="grid"></div>
+</section>
+
+<!-- GAME -->
+<section id="game" class="scr">
+  <div class="hud glass">
+    <button class="ico" data-back aria-label="Back">‹</button>
+    <div class="hmid"><div id="hGoal"></div><div id="hProg" class="mu"></div></div>
+    <div class="hs"><b id="hScore">0</b><div id="hBest" class="mu"></div></div>
+  </div>
+  <button id="bFin" class="btn" hidden><span data-t="25"></span></button>
+  <div id="cw"><canvas id="gc"></canvas></div>
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="scr">
+  <header class="top"><button class="ico" data-back aria-label="Back">‹</button><h2 data-t="4"></h2><span class="ico"></span></header>
+  <div id="sbody" class="grid"></div>
+</section>
+
+<div id="ov"></div>
+<div id="cp" aria-live="polite"><b></b><small></small></div>
+<div id="bn"></div>
+<div id="toast" class="glass"></div>
+<script src="game.js"></script>
+</body>
+</html>
